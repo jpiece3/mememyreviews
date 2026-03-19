@@ -1,0 +1,149 @@
+---
+---
+
+<section class="section" id="features" style="padding-top: 0;">
+  <div class="section-label">// What you get</div>
+  <h2>EVERYTHING YOUR<br />SOCIAL TEAM WISHES<br />THEY HAD TIME FOR.</h2>
+  <div class="features-grid fade-in">
+    <div class="feature-cell dark">
+      <span class="feature-icon">&#x1f3ad;</span>
+      <h3>Trending Meme Templates</h3>
+      <p>Always-fresh meme formats pulled from what's actually working right now — not templates from 2019.</p>
+    </div>
+    <div class="feature-cell">
+      <span class="feature-icon">&#x1f3ac;</span>
+      <h3>Video Memes Included</h3>
+      <p>Growth and Agency plans include AI-generated video memes. Perfect for TikTok, Instagram Reels, and YouTube Shorts.</p>
+    </div>
+    <div class="feature-cell accent">
+      <span class="feature-icon">&#9997;&#65039;</span>
+      <h3>Platform Captions Written For You</h3>
+      <p>Every meme ships with 3 captions — one for LinkedIn, one for Instagram, one for TikTok. Copy. Paste. Post.</p>
+    </div>
+    <div class="feature-cell">
+      <span class="feature-icon">&#x1f4f0;</span>
+      <h3>Weekly Auto-Newsletter</h3>
+      <p>A fully written newsletter with your meme pack, top review highlights, and a CTA. Sent to your inbox every Monday morning.</p>
+    </div>
+    <div class="feature-cell">
+      <span class="feature-icon">&#x1f504;</span>
+      <h3>One-Click Regenerate</h3>
+      <p>Don't love a meme? Regenerate it instantly. Edit the text. Swap the template. You're always in control.</p>
+    </div>
+    <div class="feature-cell dark">
+      <span class="feature-icon">&#x1f4e6;</span>
+      <h3>Download Packs or Push to Notion</h3>
+      <p>Download a ZIP, push to a Notion content calendar, or connect Buffer to schedule posts automatically.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    background: var(--border);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-top: 48px;
+  }
+
+  @media (min-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 64px;
+    }
+  }
+
+  .feature-cell {
+    background: var(--cream);
+    padding: 36px 28px;
+    transition: background 0.2s;
+  }
+
+  @media (min-width: 768px) {
+    .feature-cell {
+      padding: 48px 40px;
+    }
+  }
+
+  .feature-cell:hover {
+    background: var(--white);
+  }
+
+  .feature-cell.dark {
+    background: var(--black);
+    color: var(--cream);
+  }
+
+  .feature-cell.dark:hover {
+    background: #111;
+  }
+
+  .feature-cell.accent {
+    background: var(--orange);
+    color: var(--white);
+  }
+
+  .feature-cell.accent:hover {
+    background: var(--orange-hover);
+  }
+
+  .feature-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .feature-cell h3 {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .feature-cell h3 {
+      font-size: 30px;
+    }
+  }
+
+  .feature-cell p {
+    font-size: 14px;
+    line-height: 1.65;
+    opacity: 0.75;
+  }
+
+  @media (min-width: 768px) {
+    .feature-cell p {
+      font-size: 15px;
+    }
+  }
+
+  .feature-cell.dark h3 {
+    color: var(--cream);
+  }
+
+  .feature-cell.dark p {
+    color: #aaa;
+    opacity: 1;
+  }
+
+  .feature-cell.accent h3 {
+    color: var(--white);
+  }
+
+  .feature-cell.accent p {
+    color: rgba(255, 255, 255, 0.85);
+    opacity: 1;
+  }
+</style>

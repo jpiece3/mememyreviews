@@ -1,0 +1,67 @@
+---
+---
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item"><span class="dot">&#9679;</span> MEMES FROM REVIEWS</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> WEEKLY NEWSLETTER</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> ZERO EFFORT</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> AUTO-GENERATED CAPTIONS</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> INSTAGRAM READY</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> TIKTOK READY</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> LINKEDIN READY</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="ticker-item"><span class="dot">&#9679;</span> MEMES FROM REVIEWS</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> WEEKLY NEWSLETTER</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> ZERO EFFORT</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> AUTO-GENERATED CAPTIONS</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> INSTAGRAM READY</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> TIKTOK READY</div>
+    <div class="ticker-item"><span class="dot">&#9679;</span> LINKEDIN READY</div>
+  </div>
+</div>
+
+<style>
+  .ticker-wrap {
+    background: var(--black);
+    padding: 14px 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ticker {
+    display: flex;
+    gap: 0;
+    animation: ticker 30s linear infinite;
+    width: max-content;
+  }
+
+  .ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 32px;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--cream);
+    white-space: nowrap;
+  }
+
+  @media (min-width: 768px) {
+    .ticker-item {
+      font-size: 18px;
+    }
+  }
+
+  .dot {
+    color: var(--orange);
+    font-size: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .dot {
+      font-size: 24px;
+    }
+  }
+</style>

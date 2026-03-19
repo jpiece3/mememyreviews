@@ -1,0 +1,145 @@
+---
+---
+
+<section class="section testi-section">
+  <div class="section-label">// What brands say</div>
+  <h2>THEY STOPPED<br />OVERTHINKING CONTENT.</h2>
+  <div class="testimonials fade-in">
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-quote">"We had no idea our reviews were this funny. MemeMyReviews turned our Amazon reviews into our best-performing Instagram content. It runs itself."</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#c084fc;">K</div>
+        <div>
+          <div class="testi-name">Katie R.</div>
+          <div class="testi-role">Founder, Barkwell Pet Co.</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-quote">"I replaced my entire social media manager's weekly deliverable with this tool. The newsletter alone is worth 10x what I'm paying."</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#f97316;">M</div>
+        <div>
+          <div class="testi-name">Marcus T.</div>
+          <div class="testi-role">DTC Brand, 7-fig revenue</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-quote">"The memes are actually good. Not just slapped text on a stock photo — real trending formats with our reviews baked in. Clients love it."</p>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#22c55e;">R</div>
+        <div>
+          <div class="testi-name">Rachel S.</div>
+          <div class="testi-role">Social Media Agency Owner</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testi-section {
+    background: var(--white);
+    padding: 60px 24px;
+  }
+
+  @media (min-width: 768px) {
+    .testi-section {
+      padding: 80px 48px;
+    }
+  }
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  @media (min-width: 768px) {
+    .testimonials {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 64px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .testimonials {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .testi-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: transform 0.2s;
+  }
+
+  @media (min-width: 768px) {
+    .testi-card {
+      padding: 28px;
+    }
+  }
+
+  .testi-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .testi-stars {
+    color: #fbbf24;
+    font-size: 14px;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+  }
+
+  .testi-quote {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.65;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .testi-quote {
+      font-size: 15px;
+    }
+  }
+
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .testi-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    flex-shrink: 0;
+  }
+
+  .testi-name {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .testi-role {
+    font-size: 12px;
+    color: var(--gray);
+  }
+</style>

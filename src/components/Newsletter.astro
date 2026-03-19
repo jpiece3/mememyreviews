@@ -1,0 +1,269 @@
+---
+---
+
+<section class="section" style="padding-top: 0;">
+  <div class="newsletter-preview fade-in">
+    <div class="newsletter-left">
+      <div class="section-label">// The newsletter feature</div>
+      <h2>YOUR REVIEWS.<br />A WEEKLY<br />NEWSLETTER.</h2>
+      <p>Every week MemeMyReviews writes and sends you a fully formatted newsletter built around your best reviews — with the meme pack already inside.</p>
+      <ul class="nl-bullets">
+        <li>Top 5 funniest reviews of the week, turned into memes</li>
+        <li>Pre-written intro and CTA copy — just add your logo</li>
+        <li>Ready to send via Mailchimp, Klaviyo, or Beehiiv</li>
+        <li>Lands in your inbox every Monday at 9am</li>
+      </ul>
+    </div>
+    <div class="newsletter-right">
+      <div class="newsletter-card">
+        <div class="nl-card-header">
+          <div class="nl-card-header-left">
+            <div class="nl-logo-sm">Meme<span>My</span>Reviews</div>
+          </div>
+          <span class="nl-date">MON, JAN 6 &middot; ISSUE #14</span>
+        </div>
+        <div class="nl-card-body">
+          <div class="nl-subject">This Week's Reviews Were Actually Unhinged &#x1f525;</div>
+          <div class="nl-meta">From: MemeMyReviews Weekly &middot; To: Your Subscribers</div>
+          <div class="nl-section-label">&#x1f3ad; This Week's Meme Pack</div>
+          <div class="nl-meme-row">
+            <div class="nl-meme-thumb">WHEN YOUR PRODUCT HITS DIFFERENT</div>
+            <div class="nl-meme-thumb t2">MY HUSBAND DIDN'T BELIEVE ME</div>
+            <div class="nl-meme-thumb t3">5 STARS. WOULD OBSESS AGAIN.</div>
+          </div>
+          <hr class="nl-divider" />
+          <div class="nl-section-label">&#x1f4dd; Editor's Note</div>
+          <div class="nl-copy">Your customers are out here writing comedy gold in the review section and nobody's using it. This week's batch had us crying. Enjoy the memes — share them everywhere.</div>
+          <a href="#" class="nl-cta">View Full Newsletter &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .newsletter-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .newsletter-preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+  }
+
+  .newsletter-left p {
+    font-size: 16px;
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 440px;
+  }
+
+  @media (min-width: 768px) {
+    .newsletter-left p {
+      font-size: 17px;
+    }
+  }
+
+  .newsletter-left h2 {
+    margin-bottom: 20px;
+  }
+
+  .nl-bullets {
+    list-style: none;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nl-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--text-dark);
+  }
+
+  .nl-bullets li::before {
+    content: '\2192';
+    color: var(--orange);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .newsletter-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: 8px 8px 0px var(--black);
+    width: 100%;
+    max-width: 480px;
+  }
+
+  @media (min-width: 1024px) {
+    .newsletter-card {
+      max-width: none;
+    }
+  }
+
+  .nl-card-header {
+    background: var(--black);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (min-width: 768px) {
+    .nl-card-header {
+      padding: 20px 24px;
+    }
+  }
+
+  .nl-card-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nl-logo-sm {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--cream);
+  }
+
+  .nl-logo-sm span {
+    color: var(--orange);
+  }
+
+  .nl-date {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #666;
+  }
+
+  .nl-card-body {
+    padding: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .nl-card-body {
+      padding: 24px;
+    }
+  }
+
+  .nl-subject {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: 768px) {
+    .nl-subject {
+      font-size: 22px;
+    }
+  }
+
+  .nl-meta {
+    font-size: 12px;
+    color: var(--gray);
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+  }
+
+  .nl-section-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .nl-meme-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .nl-meme-row {
+      gap: 10px;
+    }
+  }
+
+  .nl-meme-thumb {
+    flex: 1;
+    height: 70px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, #f5f0e8, #e8e0d5);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+    color: var(--gray);
+    text-align: center;
+    padding: 6px;
+  }
+
+  @media (min-width: 768px) {
+    .nl-meme-thumb {
+      height: 80px;
+      font-size: 10px;
+      padding: 8px;
+    }
+  }
+
+  .nl-meme-thumb.t2 {
+    background: linear-gradient(135deg, #fff0ea, #ffe5d5);
+  }
+
+  .nl-meme-thumb.t3 {
+    background: linear-gradient(135deg, #fffde7, #fff8cc);
+  }
+
+  .nl-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 16px 0;
+  }
+
+  .nl-copy {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .nl-cta {
+    display: inline-block;
+    margin-top: 16px;
+    background: var(--orange);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+
+  .nl-cta:hover {
+    color: var(--white);
+    background: var(--orange-hover);
+  }
+</style>

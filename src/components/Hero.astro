@@ -1,0 +1,554 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">
+      <span class="tag-dot"></span>
+      New — Newsletter generation included
+    </div>
+    <h1>YOUR REVIEWS.<br /><span class="highlight">THEIR</span><br />NEW FAVE<br />MEME.</h1>
+    <p class="hero-sub">Turn your best customer reviews into shareable memes and a weekly newsletter — without lifting a finger. Built for shareability and relatability.</p>
+    <div class="hero-ctas">
+      <a href="#pricing" class="btn-primary">Start for free &rarr;</a>
+      <a href="#how" class="btn-secondary">
+        See how it works
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+    <div class="hero-social-proof">
+      <div class="avatars">
+        <span style="background:#c084fc;">K</span>
+        <span style="background:#f97316;">M</span>
+        <span style="background:#22c55e;">R</span>
+        <span style="background:#3b82f6;">+</span>
+      </div>
+      <div class="social-text">
+        <strong>340+ brands</strong> already turning<br />their reviews into content
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="mockup-stack">
+      <div class="mockup-card card-back1"></div>
+      <div class="mockup-card card-back2"></div>
+      <div class="mockup-card card-main">
+        <div class="card-main-header">
+          <div class="card-dots">
+            <span class="d1"></span>
+            <span class="d2"></span>
+            <span class="d3"></span>
+          </div>
+          <span class="card-title-bar">mememyreviews.com — meme_gen.js</span>
+        </div>
+        <div class="card-body">
+          <div class="meme-placeholder">
+            <div class="meme-inner">
+              <span class="top-text">Customer review energy:</span>
+              I BOUGHT THIS<br />FOR MY DOG.<br />NOW HE'S MORE<br />HYDRATED THAN ME.
+            </div>
+          </div>
+          <div class="review-source">
+            <strong>&#11088;&#11088;&#11088;&#11088;&#11088; Source Review</strong>
+            "I bought this water bottle for my dog after he kept stealing mine. He loves it. I'm a little jealous honestly."
+          </div>
+          <div class="card-actions">
+            <button class="card-action-btn">&#x1f504; Redo</button>
+            <button class="card-action-btn">&#9999;&#65039; Edit</button>
+            <button class="card-action-btn primary-action">&#x1f4be; Download</button>
+          </div>
+        </div>
+      </div>
+      <div class="float-badge badge-top">&#10024; Auto-generated</div>
+      <div class="float-badge badge-bottom">&#x1f4ec; Newsletter ready</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 24px 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (min-width: 768px) {
+    .hero-left {
+      padding: 60px 48px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-left {
+      padding: 80px 48px 80px 48px;
+    }
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange-pale);
+    border: 1px solid #ffc4a8;
+    border-radius: var(--radius-pill);
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--orange);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    width: fit-content;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .tag-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+    flex-shrink: 0;
+  }
+
+  h1 {
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .highlight {
+    color: var(--orange);
+    display: inline-block;
+    position: relative;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--yellow);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: underlineIn 0.5s 0.8s ease forwards;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-top: 24px;
+    max-width: 420px;
+    line-height: 1.65;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  @media (min-width: 768px) {
+    .hero-sub {
+      font-size: 19px;
+    }
+  }
+
+  .hero-ctas {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+    animation: fadeUp 0.6s 0.3s ease both;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 768px) {
+    .hero-ctas {
+      margin-top: 40px;
+    }
+  }
+
+  .hero-social-proof {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  @media (min-width: 768px) {
+    .hero-social-proof {
+      margin-top: 48px;
+    }
+  }
+
+  .avatars {
+    display: flex;
+  }
+
+  .avatars span {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2.5px solid var(--cream);
+    margin-left: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--cream);
+    font-weight: 600;
+    font-family: var(--font-mono);
+  }
+
+  .avatars span:first-child {
+    margin-left: 0;
+  }
+
+  .social-text {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.4;
+  }
+
+  .social-text strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  /* Hero Right - Mockup Stack */
+  .hero-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    position: relative;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-right {
+      padding: 80px 48px 80px 0;
+    }
+  }
+
+  .mockup-stack {
+    position: relative;
+    width: 320px;
+    height: 440px;
+  }
+
+  @media (min-width: 768px) {
+    .mockup-stack {
+      width: 380px;
+      height: 480px;
+    }
+  }
+
+  .mockup-card {
+    position: absolute;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1.5px solid var(--border);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .card-main {
+    width: 280px;
+    top: 40px;
+    left: 20px;
+    z-index: 3;
+    animation: floatMain 4s ease-in-out infinite;
+  }
+
+  @media (min-width: 768px) {
+    .card-main {
+      width: 320px;
+      left: 30px;
+    }
+  }
+
+  .card-back1 {
+    width: 260px;
+    height: 180px;
+    top: 10px;
+    left: 40px;
+    z-index: 2;
+    transform: rotate(3deg);
+    animation: floatBack1 4s 0.5s ease-in-out infinite;
+    background: var(--orange-pale);
+    border-color: #ffc4a8;
+  }
+
+  @media (min-width: 768px) {
+    .card-back1 {
+      width: 300px;
+      height: 200px;
+      left: 50px;
+    }
+  }
+
+  .card-back2 {
+    width: 240px;
+    height: 160px;
+    top: 240px;
+    left: 60px;
+    z-index: 1;
+    transform: rotate(-4deg);
+    animation: floatBack2 4s 1s ease-in-out infinite;
+    background: #fffde7;
+    border-color: #ffe082;
+  }
+
+  @media (min-width: 768px) {
+    .card-back2 {
+      width: 280px;
+      height: 180px;
+      top: 260px;
+      left: 70px;
+    }
+  }
+
+  .card-main-header {
+    background: var(--black);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  @media (min-width: 768px) {
+    .card-main-header {
+      padding: 12px 16px;
+    }
+  }
+
+  .card-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  .d1 { background: #ff5f57; }
+  .d2 { background: #febc2e; }
+  .d3 { background: #28c840; }
+
+  .card-title-bar {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #888;
+    margin-left: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 768px) {
+    .card-title-bar {
+      font-size: 11px;
+    }
+  }
+
+  .card-body {
+    padding: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .card-body {
+      padding: 16px;
+    }
+  }
+
+  .meme-placeholder {
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(135deg, #f0f0f0 25%, #e8e8e8 25%, #e8e8e8 50%, #f0f0f0 50%, #f0f0f0 75%, #e8e8e8 75%);
+    background-size: 20px 20px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+  }
+
+  @media (min-width: 768px) {
+    .meme-placeholder {
+      height: 160px;
+    }
+  }
+
+  .meme-inner {
+    background: var(--white);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--black);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    max-width: 200px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .meme-inner {
+      font-size: 18px;
+    }
+  }
+
+  .top-text {
+    font-size: 12px;
+    color: var(--gray);
+    font-family: var(--font-body);
+    font-weight: 300;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .top-text {
+      font-size: 13px;
+    }
+  }
+
+  .review-source {
+    margin-top: 12px;
+    background: var(--orange-pale);
+    border-radius: var(--radius-md);
+    padding: 10px 12px;
+    font-size: 11px;
+    color: var(--text-light);
+    line-height: 1.5;
+    border-left: 3px solid var(--orange);
+  }
+
+  @media (min-width: 768px) {
+    .review-source {
+      font-size: 12px;
+    }
+  }
+
+  .review-source strong {
+    display: block;
+    color: var(--black);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+
+  .card-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .card-actions {
+      gap: 8px;
+    }
+  }
+
+  .card-action-btn {
+    flex: 1;
+    padding: 7px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--gray);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    transition: all 0.15s;
+    font-family: var(--font-body);
+  }
+
+  @media (min-width: 768px) {
+    .card-action-btn {
+      padding: 8px;
+      font-size: 11px;
+      gap: 4px;
+    }
+  }
+
+  .card-action-btn:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+
+  .card-action-btn.primary-action {
+    background: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+  }
+
+  /* Floating badges */
+  .float-badge {
+    position: absolute;
+    background: var(--yellow);
+    border: 1.5px solid var(--black);
+    border-radius: var(--radius-pill);
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--black);
+    font-family: var(--font-mono);
+    z-index: 10;
+    white-space: nowrap;
+  }
+
+  .badge-top {
+    top: 20px;
+    right: 0;
+    animation: badgeFloat 3s 0.3s ease-in-out infinite;
+  }
+
+  @media (min-width: 768px) {
+    .badge-top {
+      right: 10px;
+    }
+  }
+
+  .badge-bottom {
+    bottom: 60px;
+    right: -10px;
+    animation: badgeFloat 3s 1s ease-in-out infinite;
+  }
+
+  @media (min-width: 768px) {
+    .badge-bottom {
+      bottom: 80px;
+      right: 0;
+    }
+  }
+</style>

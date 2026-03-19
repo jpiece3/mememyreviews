@@ -1,0 +1,157 @@
+---
+---
+
+<section class="section" id="how">
+  <div class="section-label">// How it works</div>
+  <h2>FOUR STEPS.<br />ZERO WORK.</h2>
+  <div class="steps fade-in">
+    <div class="step">
+      <span class="step-num">01</span>
+      <div class="step-icon">&#x1f517;</div>
+      <h3>Connect Your Store</h3>
+      <p>Paste your Amazon listing, Shopify URL, G2 profile, or Trustpilot page. We do the rest — no CSV exports, no copy-pasting.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <div class="step-icon">&#x1f9e0;</div>
+      <h3>AI Picks the Best</h3>
+      <p>Claude reads every review and scores them for meme-ability — funny, relatable, punchy. Only the gold ones make the cut.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <div class="step-icon">&#x1f3ad;</div>
+      <h3>Memes Get Made</h3>
+      <p>Memelord AI generates trending meme formats around each review. Image memes, video memes, platform-specific captions — all ready to post.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">04</span>
+      <div class="step-icon">&#x1f4ec;</div>
+      <h3>Newsletter Drops</h3>
+      <p>Every week a fully written newsletter lands in your inbox with the meme pack baked in. Forward it, send it, schedule it. Done.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 48px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 64px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .steps {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .step {
+    padding: 32px 24px;
+    border-bottom: 1.5px solid var(--border);
+    position: relative;
+    transition: background 0.2s;
+  }
+
+  @media (min-width: 768px) {
+    .step {
+      padding: 40px 32px;
+      border-bottom: none;
+      border-right: 1.5px solid var(--border);
+    }
+
+    .step:nth-child(2) {
+      border-right: none;
+    }
+
+    .step:nth-child(3),
+    .step:nth-child(4) {
+      border-top: 1.5px solid var(--border);
+    }
+
+    .step:nth-child(4) {
+      border-right: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .step {
+      border-right: 1.5px solid var(--border);
+      border-top: none;
+    }
+
+    .step:nth-child(2) {
+      border-right: 1.5px solid var(--border);
+    }
+
+    .step:nth-child(3) {
+      border-top: none;
+    }
+
+    .step:last-child {
+      border-right: none;
+    }
+  }
+
+  .step:last-child {
+    border-bottom: none;
+  }
+
+  .step:hover {
+    background: var(--white);
+  }
+
+  .step-num {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    line-height: 1;
+    color: #e8e0d5;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .step-num {
+      font-size: 64px;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  .step-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--orange-pale);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border: 1px solid #ffc4a8;
+  }
+
+  .step h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.65;
+  }
+</style>

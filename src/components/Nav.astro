@@ -1,0 +1,108 @@
+---
+---
+
+<nav>
+  <a href="#" class="nav-logo">Meme<span>My</span>Reviews</a>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#pricing" class="btn-nav">Start Free &rarr;</a>
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    background: rgba(245, 240, 232, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1.5px solid var(--border);
+  }
+
+  @media (min-width: 768px) {
+    nav {
+      padding: 20px 48px;
+    }
+  }
+
+  .nav-logo {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  @media (min-width: 768px) {
+    .nav-logo {
+      font-size: 28px;
+    }
+  }
+
+  .nav-logo span {
+    color: var(--orange);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .nav-links {
+      gap: 32px;
+    }
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--orange);
+  }
+
+  /* Hide text links on small screens, keep CTA */
+  .nav-links a:not(.btn-nav) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .nav-links a:not(.btn-nav) {
+      display: inline;
+    }
+  }
+
+  .btn-nav {
+    background: var(--black);
+    color: var(--cream) !important;
+    padding: 10px 22px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    border: none;
+  }
+
+  .btn-nav:hover {
+    background: var(--orange);
+    color: var(--cream) !important;
+    transform: translateY(-1px);
+  }
+</style>
