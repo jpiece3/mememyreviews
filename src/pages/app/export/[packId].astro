@@ -1,0 +1,24 @@
+---
+import AppLayout from '../../../layouts/AppLayout.astro';
+---
+
+<AppLayout title="Export Pack">
+  <div id="export-root" data-pack-id={Astro.params.packId}></div>
+</AppLayout>
+
+<script>
+  import { createElement } from 'react';
+  import { createRoot } from 'react-dom/client';
+  import { AppShell } from '../../../app/components/AppShell';
+  import { ExportPack } from '../../../app/components/ExportPack';
+
+  const el = document.getElementById('export-root')!;
+  const packId = el.dataset.packId || '';
+
+  const root = createRoot(el);
+  root.render(
+    createElement(AppShell, { activePage: 'export' },
+      createElement(ExportPack, { packId })
+    )
+  );
+</script>

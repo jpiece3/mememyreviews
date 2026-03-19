@@ -1,4 +1,6 @@
 ---
+export const prerender = true;
+
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
@@ -9,6 +11,7 @@ import Newsletter from '../components/Newsletter.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Pricing from '../components/Pricing.astro';
 import CTA from '../components/CTA.astro';
+import Waitlist from '../components/Waitlist.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -21,6 +24,7 @@ import Footer from '../components/Footer.astro';
   <Newsletter />
   <Testimonials />
   <Pricing />
+  <Waitlist />
   <CTA />
   <Footer />
 </Layout>

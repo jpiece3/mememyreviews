@@ -3,11 +3,12 @@ import { defineConfig } from 'astro/config';
 
 import vercel from '@astrojs/vercel';
 import sitemap from '@astrojs/sitemap';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mememyreviews.com',
-  output: 'static',
+  output: 'server',
   adapter: vercel(),
-  integrations: [sitemap()],
+  integrations: [sitemap(), react()],
 });

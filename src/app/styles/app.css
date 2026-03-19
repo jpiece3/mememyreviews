@@ -1,0 +1,622 @@
+/* MemeMyReviews App Styles */
+/* Extends global.css design tokens for the SaaS app screens */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Sidebar */
+.app-sidebar {
+  width: 240px;
+  background: var(--white);
+  border-right: 1.5px solid var(--border);
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+}
+
+.app-sidebar-logo {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  letter-spacing: 2px;
+  padding: 0 24px;
+  margin-bottom: 32px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.app-sidebar-logo span {
+  color: var(--orange);
+}
+
+.app-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 12px;
+}
+
+.app-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray);
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.app-sidebar-link:hover {
+  background: var(--cream);
+  color: var(--black);
+}
+
+.app-sidebar-link.active {
+  background: var(--orange-pale);
+  color: var(--orange);
+}
+
+/* Main content area */
+.app-main {
+  flex: 1;
+  margin-left: 240px;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+/* Top bar */
+.app-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.app-topbar-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  letter-spacing: 0.5px;
+}
+
+.app-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* App cards */
+.app-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.app-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--black);
+  background: var(--white);
+  transition: border-color 0.15s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.form-input::placeholder {
+  color: #bbb;
+}
+
+/* Chip select */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.15s;
+  background: var(--white);
+}
+
+.chip:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.chip.selected {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+
+/* Radio cards */
+.radio-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.radio-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.radio-card:hover {
+  border-color: var(--orange);
+}
+
+.radio-card.selected {
+  border-color: var(--orange);
+  background: var(--orange-pale);
+  box-shadow: 0 0 0 1px var(--orange);
+}
+
+.radio-card-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.radio-card-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.radio-card-desc {
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 4px;
+}
+
+/* Meme card */
+.meme-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.meme-card-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+}
+
+.meme-card-body {
+  padding: 16px;
+}
+
+.meme-card-review {
+  font-size: 12px;
+  color: var(--gray);
+  font-style: italic;
+  padding: 10px 12px;
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--orange);
+  margin-bottom: 12px;
+}
+
+.meme-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.meme-card-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--white);
+  font-size: 11px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.meme-card-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.meme-card-btn.primary {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+
+/* Caption tabs */
+.caption-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1.5px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.caption-tab {
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: var(--font-body);
+}
+
+.caption-tab:hover {
+  color: var(--black);
+}
+
+.caption-tab.active {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+
+.caption-text {
+  font-size: 13px;
+  color: var(--text-dark);
+  line-height: 1.5;
+  padding: 12px;
+  background: var(--cream);
+  border-radius: var(--radius-md);
+}
+
+/* Progress bar */
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: var(--border);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--orange);
+  border-radius: var(--radius-pill);
+  transition: width 0.3s ease;
+}
+
+/* Memeability badge */
+.memeability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.memeability-badge.high {
+  background: rgba(26, 255, 140, 0.15);
+  color: #0d9e4f;
+}
+
+.memeability-badge.medium {
+  background: rgba(255, 216, 77, 0.2);
+  color: #b8860b;
+}
+
+.memeability-badge.low {
+  background: rgba(255, 92, 26, 0.1);
+  color: var(--orange);
+}
+
+/* Review card in discovery */
+.review-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.review-card:hover {
+  border-color: var(--orange);
+}
+
+.review-card.selected {
+  border-color: var(--orange);
+  background: var(--orange-pale);
+}
+
+.review-card-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.review-card.selected .review-card-checkbox {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+
+/* Live scrape feed */
+.scrape-feed {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--black);
+  color: var(--green);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.scrape-feed-line {
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: fadeUp 0.3s ease forwards;
+}
+
+/* Auth pages */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 8px 8px 0px var(--black);
+}
+
+.auth-logo {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-logo span {
+  color: var(--orange);
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0;
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.auth-footer a {
+  color: var(--orange);
+  font-weight: 500;
+}
+
+/* App button variants */
+.app-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-decoration: none;
+  border: none;
+}
+
+.app-btn-primary {
+  background: var(--orange);
+  color: var(--white);
+  box-shadow: var(--shadow-offset);
+}
+
+.app-btn-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-offset-lg);
+}
+
+.app-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: var(--shadow-offset);
+}
+
+.app-btn-secondary {
+  background: var(--white);
+  color: var(--black);
+  border: 1.5px solid var(--border);
+}
+
+.app-btn-secondary:hover {
+  border-color: var(--black);
+}
+
+.app-btn-google {
+  width: 100%;
+  background: var(--white);
+  color: var(--black);
+  border: 1.5px solid var(--border);
+  padding: 12px;
+}
+
+.app-btn-google:hover {
+  background: var(--cream);
+}
+
+/* Responsive: mobile sidebar becomes top nav */
+@media (max-width: 767px) {
+  .app-sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    border-right: none;
+    border-bottom: 1.5px solid var(--border);
+  }
+
+  .app-sidebar-nav {
+    flex-direction: row;
+    padding: 0;
+    gap: 4px;
+    overflow-x: auto;
+  }
+
+  .app-sidebar-logo {
+    margin-bottom: 0;
+    margin-right: 16px;
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .app-main {
+    margin-left: 0;
+    margin-top: 60px;
+    padding: 16px;
+  }
+
+  .radio-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

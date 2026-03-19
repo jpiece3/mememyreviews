@@ -1,0 +1,11 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+import { AppShell } from '../../app/components/AppShell';
+import { Dashboard } from '../../app/components/Dashboard';
+---
+
+<AppLayout title="Dashboard">
+  <AppShell activePage="dashboard" client:only="react">
+    <Dashboard />
+  </AppShell>
+</AppLayout>

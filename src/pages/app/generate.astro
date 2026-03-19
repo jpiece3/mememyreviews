@@ -1,0 +1,39 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+import { AppShell } from '../../app/components/AppShell';
+---
+
+<AppLayout title="Generate Memes">
+  <div id="generate-root"></div>
+</AppLayout>
+
+<script>
+  import { createElement } from 'react';
+  import { createRoot } from 'react-dom/client';
+  import { AppShell } from '../../app/components/AppShell';
+  import { ReviewDiscovery } from '../../app/components/ReviewDiscovery';
+  import { MemeGeneration } from '../../app/components/MemeGeneration';
+  import { useAppStore } from '../../app/store/appStore';
+
+  function GeneratePage() {
+    const params = new URLSearchParams(window.location.search);
+    const brandId = params.get('brandId') || '';
+    const packId = useAppStore((s) => s.currentPackId);
+
+    return createElement(
+      AppShell,
+      { activePage: 'generate' },
+      packId
+        ? createElement(MemeGeneration, { packId })
+        : createElement(ReviewDiscovery, {
+            brandId,
+            onGenerate: () => {
+              // MemeGeneration will take over when packId is set
+            },
+          })
+    );
+  }
+
+  const root = createRoot(document.getElementById('generate-root')!);
+  root.render(createElement(GeneratePage));
+</script>
